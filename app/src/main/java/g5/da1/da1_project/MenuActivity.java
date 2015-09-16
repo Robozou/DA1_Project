@@ -7,38 +7,37 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
+import android.widget.Toast;
 
 //import com.firebase.client.Firebase;
 
-public class LoginActivity extends AppCompatActivity {
-    Button loginBut, registerBut;
-    EditText usernameEdit, passwordEdit;
+
+public class MenuActivity extends AppCompatActivity {
     //Firebase myFirebaseRef;
+    Button kontaktBut, mapsBut;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         //Firebase.setAndroidContext(this);
         //myFirebaseRef = new Firebase("https://shining-inferno-7431.firebaseio.com/");
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
-        loginBut = (Button) findViewById(R.id.loginButton);
-        loginBut.setOnClickListener(new View.OnClickListener() {
+        setContentView(R.layout.activity_menu);
+        mapsBut = (Button) findViewById(R.id.MapsBut);
+        mapsBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
+                Intent intent = new Intent(getApplicationContext(), MapsActivity.class);
+                startActivity(intent);
             }
         });
-        registerBut = (Button) findViewById(R.id.registerButton);
-        registerBut.setOnClickListener(new View.OnClickListener() {
+        kontaktBut = (Button) findViewById(R.id.KontaktBut);
+        kontaktBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+               Toast toast = Toast.makeText(getApplicationContext(),"You have no Contacts!", Toast.LENGTH_SHORT);
+                toast.show();
             }
         });
-        usernameEdit = (EditText) findViewById(R.id.UsernameText);
-        passwordEdit = (EditText) findViewById(R.id.PasswordText);
-
     }
 
 }
