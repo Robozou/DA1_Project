@@ -14,7 +14,7 @@ import android.widget.Toast;
 
 public class MenuActivity extends AppCompatActivity {
     //Firebase myFirebaseRef;
-    Button kontaktBut, mapsBut;
+    private Button kontaktBut, mapsBut;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
