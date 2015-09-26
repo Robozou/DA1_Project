@@ -52,7 +52,17 @@ public class LoginActivity extends AppCompatActivity {
         registerBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                myFirebaseRef.createUser(usernameEdit.getText().toString(), passwordEdit.getText().toString(), new Firebase.ResultHandler() {
+                    @Override
+                    public void onSuccess() {
+                        Toast.makeText(getApplicationContext(), "You are registred you may now login!", Toast.LENGTH_LONG).show();
+                    }
 
+                    @Override
+                    public void onError(FirebaseError firebaseError) {
+                        Toast.makeText(getApplicationContext(), firebaseError.getMessage(), Toast.LENGTH_LONG).show();
+                    }
+                });
             }
         });
 
