@@ -121,7 +121,6 @@
     <orderEntry type="library" exported="" name="play-services-drive-7.8.0" level="project" />
     <orderEntry type="library" exported="" name="firebase-client-jvm-2.3.1" level="project" />
     <orderEntry type="library" exported="" name="firebase-client-android-2.3.1" level="project" />
-    <orderEntry type="library" exported="" name="1_firebase-client-android-2.3.1" level="project" />
     <orderEntry type="library" exported="" name="play-services-ads-7.8.0" level="project" />
     <orderEntry type="library" exported="" name="play-services-analytics-7.8.0" level="project" />
     <orderEntry type="library" exported="" name="play-services-appindexing-7.8.0" level="project" />
